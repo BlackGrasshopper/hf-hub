@@ -128,6 +128,12 @@ impl ApiBuilder {
         }
     }
 
+    /// Changes the endpoint . Defaults is `https://huggingface.co`.
+    pub fn with_endpoint(mut self, endpoint: String) -> Self {
+        self.endpoint = endpoint;
+        self
+    }
+
     /// Wether to show a progressbar
     pub fn with_progress(mut self, progress: bool) -> Self {
         self.progress = progress;
